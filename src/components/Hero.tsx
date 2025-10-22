@@ -1,4 +1,14 @@
+import { useEffect, useRef } from "react";
+
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // videoRef.current.play();
+      videoRef.current.playbackRate = 2;
+    }
+  }, []);
   return (
     <div className=" mt-10 h-[calc(100vh-50px)] flex justify-center items-center">
       <div
@@ -9,8 +19,8 @@ const Hero = () => {
           <h2 className="text-2xl">MacBook Pro</h2>
           <img src="/title.png" alt="" />
         </div>
-        <div className="bg-red- p-2">
-          <video autoPlay loop muted src="/videos/hero.mp4" />
+        <div className="bg-red-">
+          <video ref={videoRef} autoPlay muted playsInline src="/videos/hero.mp4" />
           <div className="bg-amber-20 flex justify-center items-center mt-4 gap-4 flex-col ">
             <button className="max-w-fit px-4 py-2 rounded-full bg-blue-500">
               Buy
