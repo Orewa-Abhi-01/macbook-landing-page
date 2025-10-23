@@ -267,10 +267,10 @@ body {
     }
 
     .content {
-      @apply mx-auto max-w-xl mt-24;
+      @apply mx-auto max-w-xl mt-24 text-white text-center;
 
       p {
-        @apply lg:h3-semibold base-semibold text-center translate-y-10 opacity-0 px-5;
+        @apply lg:h3-semibold base-semibold text-center translate-y-10  px-5;
       }
     }
   }

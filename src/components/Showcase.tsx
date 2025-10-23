@@ -12,9 +12,9 @@ const Showcase = () => {
                     trigger: '#showcase',
                     start: 'top 0%',
                     // end: 'bottom 0%',
-                    end: '+=100%',
+                    // end: '+=100%',
                     scrub: true,
-                    pin: true,
+                    // pin: true,
                     markers: true,
                 }
             });
